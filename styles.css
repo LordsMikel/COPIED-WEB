@@ -1,0 +1,749 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabecera */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border-bottom: 5px solid #16a085;
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-top: 10px;
+    color: #ecf0f1;
+}
+
+/* Barra de navegación */
+.nav-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #16a085;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-links ul li a:hover {
+    background-color: #1abc9c;
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    flex-direction: row; /* Asegura que la barra lateral y el contenido se alineen horizontalmente */
+    margin-top: 40px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box;
+}
+
+/* Barra lateral */
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-right: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 20px; /* Espacio entre la barra lateral y el contenido principal */
+    box-sizing: border-box;
+}
+
+.sidebar .profile-pic img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar .profile-pic img:hover {
+    transform: scale(1.05);
+}
+
+.sidebar h3 {
+    color: #16a085;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.sidebar p, .sidebar ul {
+    font-size: 1em;
+    color: #333;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li i {
+    color: #16a085;
+    margin-right: 8px;
+}
+
+/* Contenido de la derecha */
+.content {
+    flex: 3;
+    padding: 20px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.content h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.content ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.content ul li i {
+    color: #16a085;
+    margin-right: 10px;
+}
+
+/* Formulario de contacto */
+.main-contact-form {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    box-sizing: border-box;
+}
+
+.main-contact-form h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.main-contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.main-contact-form input,
+.main-contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Ocupa todo el ancho del formulario */
+}
+
+.main-contact-form button {
+    padding: 12px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #16a085;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-contact-form button:hover {
+    background-color: #1abc9c;
+}
+
+/* Footer */
+footer.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 0.9em;
+    width: 100%; /* Ocupa todo el ancho de la página */
+    box-sizing: border-box;
+    margin-top: auto; /* Asegura que el footer esté en la parte inferior */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Efecto hover en títulos */
+.sidebar h3:hover, .content h3:hover {
+    color: #1abc9c;
+}
+
+/* Efectos en botones */
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #1abc9c;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        margin-bottom: 20px;
+        margin-right: 0; /* Elimina el margen derecho para móviles */
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header h2 {
+        font-size: 1.2em;
+    }
+
+    footer.footer {
+        padding: 20px;
+    }
+}
+
+
+/* Proyectos */
+.projects {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.projects h3 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projects ul li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.projects ul li a {
+    color: #16a085;
+    text-decoration: none;
+}
+
+.projects ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design para móviles */
+@media (max-width: 768px) {
+    .nav-links ul li {
+        display: block; /* Cambia el diseño a bloque para dispositivos móviles */
+        margin: 10px 0; /* Espacio vertical entre los enlaces */
+    }
+    
+    .nav-links ul li a {
+        padding: 15px 25px; /* Aumenta el padding para un mejor toque en pantallas táctiles */
+        font-size: 1.2em; /* Aumenta el tamaño de la fuente para mejor legibilidad */
+    }
+}
+
+.main-content-projects {
+    /* Copia los estilos de .main-content aquí */
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    margin-bottom: 40px; /* Espacio entre el contenido y el footer */
+    /* Otros estilos como background, border, etc., según corresponda */
+}
+
+/* Opcional: Ajusta el margen inferior del footer si es necesario */
+.footer {
+    margin-top: 20px; /* Asegura que haya espacio entre el contenido y el pie de página */
+}
+
+
+
+/* Nueva sección de premios */
+.awards {
+    margin-bottom: 40px;
+}
+
+.awards h3 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.award-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+}
+
+.award-details {
+    margin-left: 20px;
+}
+
+.award-details h4 {
+    color: #16a085;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.award-details p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.awards-icon {
+    font-size: 2em;
+    color: #f1c40f;
+    animation: bounce 2s infinite;
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+/* Bounce Animation for Award Icon */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+ 
+
+.trophy-icon {
+    font-size: 3em;
+    color: #f1c40f;
+    /* animation: bounce 2s infinite; */
+}
+
+/* Bounce Animation for Trophy */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* Tarjetas de información */
+.info-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Emoticono de Educación animado estilo trofeo */
+.education-icon {
+    font-size: 2em;
+    color: #16a085; /* Color personalizado */
+    animation: bounce 2s infinite; /* Animación similar a la del trofeo */
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.certifications-icon {
+    font-size: 2em;
+    color: #16a085;
+    animation: bounce 2s infinite;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* Animación Bounce para el emoticono */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animaciones e iconos para otras secciones */
+.skills-icon, .languages-icon, .experience-icon .certifications-icon {
+    font-size: 1.5em;
+    color: #16a085;
+}
+
+/* Sección de Educación */
+.education {
+    margin-bottom: 40px;
+}
+
+.education h3 {
+    font-size: 2em;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Sección de Habilidades Técnicas */
+.skills h3 {
+    font-size: 2em;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Sección de Idiomas */
+.languages h3 {
+    font-size: 2em;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Sección de Experiencia */
+.experience h3 {
+    font-size: 2em;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* Tarjetas de información más grandes */
+.large-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+    font-size: 1.2em; /* Tamaño de texto más grande */
+}
+
+.large-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Texto más grande */
+.large-text {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Emoticono inline animado dentro del texto */
+.education-icon-inline-animated {
+    font-size: 1.8em;
+    color: #16a085; /* Color personalizado */
+    margin-right: 10px;
+    animation: bounce-inline 2s infinite; /* Animación */
+}
+
+/* Animación de bounce para el icono inline */
+@keyframes bounce-inline {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Animaciones e iconos de los títulos estilo trofeo */
+.education-icon, .skills-icon, .languages-icon, .experience-icon {
+    font-size: 2em;
+    color: #16a085;
+    animation: bounce 2s infinite;
+    margin-right: 10px;
+}
+
+/* Animación Bounce general */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .large-text {
+        font-size: 1.3em; /* Ajuste del tamaño para pantallas más pequeñas */
+    }
+}
+
+
+
+
+.certifications {
+    margin-top: 40px;
+}
+
+.certifications h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.certification-category {
+    margin-bottom: 20px;
+}
+
+.certification-category h4 {
+    font-size: 1.5em;
+    color: #16a085;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.certification-category h4 i {
+    margin-right: 10px;
+}
+
+.certification-category ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.certification-category ul li {
+    font-size: 1em;
+    color: #333;
+}
+
+
+/* Tarjetas de certificaciones */
+.cert-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+}
+
+.about-me {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.warning-icon {
+    animation: pulse 1.5s infinite;
+    color: #f00; /* Color rojo para llamar la atención */
+    font-size: 1.2em; /* Tamaño de fuente mayor para destacar */
+}
+
+.intro {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0;
+}
+
+.experience {
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Animación de sacudida */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+/* Otros estilos */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.zoom-in {
+    transition: transform 0.5s ease;
+}
+
+.zoom-in:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos del video */
+.award-card video {
+    width: 100%;
+    height: auto;
+    margin-top: 20px; /* Añade un espacio entre el texto y el video */
+    border-radius: 10px; /* Bordes redondeados para el video */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del video */
+}
+
+/* Créditos del video */
+.video-credits {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+}
+
+.video-credits a {
+    color: #16a085;
+    text-decoration: none;
+}
+
+.video-credits a:hover {
+    text-decoration: underline;
+}
+
+.certificate-img {
+    display: block;
+    margin: 10px auto;
+    max-width: 75%;
+    height: auto;
+}
